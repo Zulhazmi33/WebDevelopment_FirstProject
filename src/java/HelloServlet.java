@@ -62,7 +62,6 @@ public class HelloServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         
         String name = request.getParameter("name");
-        String money = request.getParameter("money");
         
         if(name==null)
             processRequest(request,response);
@@ -72,7 +71,6 @@ public class HelloServlet extends HttpServlet {
         
         out.println("Hello, "+name+"!"+"<br>");
         out.println("Apa khabar?<br>");
-        out.println("Duit saya berjumlah RM"+money+"<hr>");
                 
         out.println("Waktu dan tarikh di Server ialah "+new java.util.Date());
         out.println("</html></body>");
@@ -98,6 +96,7 @@ public class HelloServlet extends HttpServlet {
      *
      * @return a String containing servlet description
      */
+    
     @Override
     public String getServletInfo() {
         return "Short description";
